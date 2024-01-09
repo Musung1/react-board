@@ -1,5 +1,5 @@
 import React from "react";
-
+// 헤더
 function Header() {
     return (
         <div>
