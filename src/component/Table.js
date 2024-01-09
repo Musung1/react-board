@@ -1,5 +1,5 @@
 import React from "react";
-
+// Table 화면
 function Table(props) {
     let count =1;
     let tableList = props.tableList.map((element)=>(

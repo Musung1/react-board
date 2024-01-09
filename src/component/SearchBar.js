@@ -1,5 +1,6 @@
 import React from "react";
-
+// 검색 화면
+// 현재는 사용 X
 function SearchBar() {
     return (
         <div>

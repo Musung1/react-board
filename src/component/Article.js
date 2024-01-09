@@ -1,5 +1,5 @@
 import React from "react";
-
+// 게시글 상세 화면
 function Article(props) {
     return (
         <div>
