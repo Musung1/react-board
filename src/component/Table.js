@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import useStore from '../store'
 // Table 화면
 function Table(props) {
+    
+    const {articles} = useStore(state => state)
     let count =1;
-    let tableList = props.tableList.map((element)=>(
+    let tableList = articles.map((element)=>(
         <tr key={count++}>
             <td>{count}</td>
-            <td><a href="" onClick={(event)=>{
-                event.preventDefault()
-                props.linkToArticle(element)
-            }}>{element.title}</a></td>
+            <td><Link to={"/articles/" + element.title} state={{ article: element }}>{element.title}</Link></td>
             <td>{element.writer}</td>
             <td>{element.id}</td>
             <td>{element.date}</td>
