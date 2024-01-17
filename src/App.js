@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate} from 'react-router-dom';
 import Header from './\bcomponent/Header';
-import Table from './\bcomponent/Table';
-import SearchBar from './\bcomponent/SearchBar';
 import WriteArticle from './\bcomponent/WriteArticle';
 import Article from './\bcomponent/Article';
+import MyForm from './test/MyForm';
+import MyHome from './test/MyHome'
 function App() {
   const writeArticle = <WriteArticle/>
-
+  const myForm = <MyForm></MyForm>
+  const myHome = <MyHome></MyHome>
   const navigate = useNavigate();
 
   const goToWrite = () => {
@@ -15,17 +16,12 @@ function App() {
     navigate('/write')
   }
   const articleDetail = <Article/>
-  const table = 
-  <div>
-    <Table/>
-    <button onClick={goToWrite} >글쓰기</button>
-  </div>
   return ( 
     <div>
       <Header/>
       <Routes>
-        <Route path="/" element={table}/>
-        <Route path="/write" element={writeArticle}/>
+        <Route path="/" element={myHome}/>
+        <Route path="/write" element={myForm}/>
         <Route path="/articles/:title" element={articleDetail}/>
       </Routes>
     </div>
